@@ -1,0 +1,9 @@
+@require("lib/reset.dss")
+@require("lib/roundedCorners.dss")
+@require("lib/clearfix.dss")
+
+@window = {
+    @roundedCorners(10px);
+    background: #f2f2f2;
+    color: #000;
+}
