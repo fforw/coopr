@@ -1,5 +1,6 @@
-package org.coopr.auth;
+package org.coopr.appcfg;
 
+import org.coopr.auth.DomainUserDetails;
 import org.coopr.dao.UserDAO;
 import org.coopr.domain.User;
 import org.slf4j.Logger;

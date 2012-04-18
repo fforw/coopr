@@ -1,4 +1,4 @@
-package org.coopr;
+package org.coopr.webcfg;
 
 import org.coopr.dao.UserDAO;
 import org.coopr.domain.User;

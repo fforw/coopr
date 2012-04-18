@@ -23,7 +23,7 @@
     </context-param>
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>org.coopr</param-value>
+        <param-value>org.coopr.appcfg</param-value>
     </context-param>
 
     <servlet>
@@ -64,7 +64,7 @@
         </init-param>
         <init-param>
             <param-name>contextConfigLocation</param-name>
-            <param-value>org.coopr</param-value>
+            <param-value>org.coopr.webcfg</param-value>
         </init-param>
         <load-on-startup>0</load-on-startup>
     </servlet>
