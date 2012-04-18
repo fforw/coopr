@@ -13,13 +13,13 @@ import javax.persistence.Table;
 import javax.persistence.Transient;
 
 import org.coopr.Util;
+import org.synyx.hades.domain.AbstractPersistable;
 
 
 @Entity
 @Table(name = "coopruser")
 public class User
 {
-
     private Long id;
 
     private String name, password;

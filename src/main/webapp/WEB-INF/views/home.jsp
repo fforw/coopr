@@ -4,8 +4,12 @@
 <%@taglib tagdir="/WEB-INF/tags" prefix="coopr"%>
 <coopr:page title="home">
 <jsp:body>
+<!-- 
 <div class="window">
-xxx
+<div class="title">Title<a href="#" title="Close Window" class="close">x</a></div>
+<div class="body">body</div>
 </div>
+ -->
+ <div class="out"></div>
 </jsp:body>
 </coopr:page>

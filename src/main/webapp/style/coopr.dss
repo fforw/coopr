@@ -8,6 +8,13 @@ body
 	color: #f2f2f2;
 }
 
+h3
+{
+    font-size: 1.25em;
+    line-height: 1.25em;
+    margin-bottom: 0.75em;
+}
+
 #content
 {
 }
@@ -15,10 +22,40 @@ body
 .window
 {
     @window;
-    @clearfix;
+    display: block;
     width: 500px;
-    height: 400px;
 }
+
+table.form
+{
+    td:first-child
+    {
+        width: 100px;
+        text-align: right;
+        padding: 4px;
+    }
+}
+
+.remember
+{
+    display: block;
+    color: #444;
+    font-size: 0.8em;
+    
+    margin-top: 4px;
+    input
+    {
+        margin: 0;
+        padding 0;
+        border: 1px solid #666;
+    } 
+}
+
+input.text
+{
+    border: 1px solid #666;
+}
+
 
 #top
 {

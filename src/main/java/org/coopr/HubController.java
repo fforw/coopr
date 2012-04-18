@@ -14,5 +14,11 @@ public class HubController
     {
         return "home";
     }
+    
+    @RequestMapping("/login")
+    public String login()
+    {
+        return "login";
+    }
 
 }

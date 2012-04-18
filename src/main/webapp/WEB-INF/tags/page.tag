@@ -4,14 +4,15 @@
 <%@attribute name="head" fragment="true"%>
 <%@attribute name="title" required="true" type="java.lang.String"%>
 <!DOCTYPE HTML>
-<html>
+
+<html<%-- manifest="/manifest.jsp"--%>>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>${title} -- coopr</title>
 <script src="../script/json2.js"></script>
 <script src="../script/jquery-1.7.2.min.js"></script>
 <script src="../script/jWebSocket_Bundle.compressed.js"></script>
-<script src="../script/h5paint.js"></script>
+<script src="../script/coopr-init.js"></script>
 
 <link rel="stylesheet" type="text/css" href="../dss/style/coopr.dss" />
 <jsp:invoke fragment="head" />
