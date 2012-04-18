@@ -24,37 +24,40 @@ this.Application = {
 init:
     function()
     {
-        if (!window.localStorage)
-        {
-            alert("This application needs HTML5 local storage.");
-            return;
-        }
-    
         var url = 'ws://coopr.localhost:9876/appsocket';
 
         console.debug(url);
         ws = new WebSocket(url);
-        ws.onopen = function(e) {
-            console.info("connected");
-            
-            send({"type":"Login"});
-          
-            start = new Date().getTime();
-        };
-        ws.onclose = function(e) {
-            console.info("disconnected");
-        };
-        ws.onerror = function(e) {
-            console.error(e);
-        };
-        ws.onmessage = function(e) {
-            Application.onMessage(JSON.parse(e.data));
-        };
+        ws.onopen = Application.onOpen;
+        ws.onclose = Application.disconnected;
+        ws.onerror = Application.onerror;
+        ws.onmessage = Application.onMessage;
         
     },
-onMessage:
-    function(data)
+onOpen:
+    function()
     {
+        console.info("connected");
+        
+        send({"type":"Login"});
+      
+        start = new Date().getTime();
+    
+    },
+onClose:
+    function()
+    {
+        console.info("disconnected");
+    },
+onError:
+    function()
+    {
+        console.error(e);
+    },
+onMessage:
+    function(e)
+    {
+        var data = JSON.parse(e.data);
         if (data.type = "Test")
         {
             //console.debug(data.count);
@@ -76,11 +79,11 @@ onMessage:
     }
 };
 
-    // Send message to server over socket.
-    function send(outgoing) {
-        ws.send(JSON.stringify(outgoing));
-    }
+// Send message to server over socket.
+function send(outgoing) {
+    ws.send(JSON.stringify(outgoing));
+}
 
-    $(this.Application.init);
+$(this.Application.init);
     
 })(jQuery);
